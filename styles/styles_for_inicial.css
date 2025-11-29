@@ -247,18 +247,14 @@
         grid-column: 1 / -1;
       }
 
-      .hero_img:hover {
-        padding: 110px;
-        gap: 50px;
-      }
       .img_h1:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
       }
       .img_h2:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
       }
       .img_h3:hover {
-        transform: scale(1.2);
+        transform: scale(1.15);
       }
 
       /*FIN DE LA SECCION DEL HERO*/
@@ -767,4 +763,5 @@
         .cont_info {
           order: 1;
         }
+
       }
