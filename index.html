@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shard-porfolio</title>
+    <link rel="stylesheet" href="styles/styles_for_inicial.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Bytesized&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Tiny5&display=swap");
+
+       /* Estilos personalizados para el botón */
+        .whatsapp-button {
+            background-color: #25D366;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .whatsapp-button:hover {
+            box-shadow: 0 10px 15px -3px rgba(37, 211, 102, 0.5), 0 4px 6px -2px rgba(37, 211, 102, 0.25);
+            transform: scale(1.05);
+        }
+        .z-9000 {
+            z-index:1000000000;
+        }
+    </style>
+
+    <link rel="icon" href="media/img/logo - copia.png" />
+
+     <script>
+        // La lógica del botón está contenida en la etiqueta <a> (el atributo href hace la magia).
+        // Sin embargo, podemos añadir un pequeño script para mostrar un mensaje opcional
+        // en la consola o si quisiéramos añadir seguimiento de clics más complejo.
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const whatsappButton = document.querySelector('.whatsapp-button');
+            whatsappButton.addEventListener('click', (event) => {
+                // Opcional: Registrar el evento en la consola
+                console.log('Botón de WhatsApp presionado. Abriendo chat con mensaje predefinido.');
+                // La acción principal (abrir el enlace) ya está manejada por el atributo href.
+            });
+        });
+
+    </script>
+  </head>
+  <body class="fade-scroll">
+    <div class="container"></div>
+    <!-- Botón Flotante de WhatsApp -->
+    <a 
+        href="https://wa.me/5351847199?text=Hola%20vi%20tu%20pagina%20y%20tengo%20una%20duda%20sobre..." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="whatsapp-button fixed bottom-6 right-6 lg:bottom-10 lg:right-10 
+               w-16 h-16 rounded-full flex items-center justify-center 
+               shadow-xl hover:shadow-2xl text-white z-9000 cursor-pointer"
+        aria-label="Chatea con nosotros por WhatsApp"
+    >
+        <svg 
+            class="w-8 h-8 md:w-10 md:h-10" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            <path 
+                fill-rule="evenodd" 
+                clip-rule="evenodd" 
+                d="M12 2C6.477 2 2 6.477 2 12C2 14.12 2.69 16.124 3.905 17.756L2.5 22.5L7.382 21.096C8.98 21.684 10.494 22 12 22C17.523 22 22 17.523 22 12C22 6.477 17.523 2 12 2ZM16.5 14.249C16.368 14.536 15.655 14.86 15.111 15.068C14.567 15.275 14.07 15.3 13.573 15.184C13.076 15.068 12.392 14.84 11.662 14.453C10.932 14.066 10.323 13.55 9.851 12.986C9.379 12.422 9.07 11.758 8.954 11.261C8.838 10.764 8.865 10.267 9.072 9.723C9.279 9.179 9.603 8.466 9.89 8.334C10.177 8.202 10.472 8.243 10.738 8.487C10.974 8.718 11.233 8.977 11.472 9.243C11.71 9.509 11.97 9.815 12.03 9.947C12.09 10.079 12.13 10.273 12.029 10.467C11.928 10.661 11.838 10.855 11.748 11.049C11.658 11.243 11.523 11.428 11.388 11.612C11.253 11.796 11.128 11.967 11.208 12.047C11.288 12.127 11.652 12.71 12.275 13.254C12.898 13.798 13.431 13.953 13.625 14.033C13.819 14.113 13.974 14.086 14.129 13.996C14.284 13.906 14.733 13.673 15.182 13.439C15.631 13.205 16.018 13.115 16.143 13.136C16.268 13.157 16.438 13.228 16.563 13.472C16.688 13.716 16.688 14.004 16.5 14.249Z" 
+                fill="currentColor"
+            />
+        </svg>
+    </a>
+    <header>
+      <div class="content-limiter header-content">
+        <div class="logo_content">
+          <img class="logo" src="media/img/logo.png" alt="Logo_shard" />
+          <h1 class="logo_text">SHARD</h1>
+        </div>
+        <nav>
+          <a class="link" href="#inicio">Inicio</a>
+          <a class="link" href="#sobre">Sobre Nosotros</a>
+          <a class="link" href="#team">Equipo</a>
+          <a class="link" href="#contact">Contacto</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero_section">
+        <div class="content-limiter hero-grid">
+          <div class="box_hero">
+            <h1 class="title_hero" id="inicio">LLEVAMOS TU WEB A LA...</h1>
+            <h1 class="title_hero2">REALIDAD</h1>
+            <h2 class="subtitle_hero">
+              <i>Tu exito comienza por una página web que vende...</i>
+            </h2>
+            <p class="content_hero">
+              sit, necessitatibus quisquam nulla impedit distinctio aperiam! Illo
+              dolor quod ex commodi, maxime accusantium sapiente voluptatem
+              laboriosam. Magni repellendus nulla ullam voluptate ut, vel quos culpa
+              cum. Veniam commodi praesentium, perspiciatis, magnam quis fugiat
+              natus, rem tenetur maiores quae velit eius.
+            </p>
+            <a class="link_hero" href="#contact">Impulsa tu proyecto</a>
+          </div>
+          <div class="hero_img">
+            <img
+              class="img_h1"
+              src="media/img/mohammad-rahmani-_Fx34KeqIEw-unsplash.jpg"
+              alt=""
+            />
+            <img
+              class="img_h2"
+              src="media/img/mohammad-rahmani-N5bT5RctFZ8-unsplash.jpg"
+              alt=""
+            />
+            <img
+              class="img_h3"
+              src="media/img/mohammad-rahmani-W-LQbAUhE64-unsplash.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="we_section">
+        <h1 class="we_title" id="sobre">Sobre Nosotros</h1>
+        <p class="we_content">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis
+          ratione minima adipisci laborum cupiditate vero libero molestiae
+          incidunt? Quod dolores sunt vero beatae officiis repudiandae nesciunt
+          magni assumenda? Culpa impedit amet alias hic minima cumque laudantium
+          veniam molestias nihil suscipit dicta quia officiis quidem iste,
+          consequuntur animi praesentium exercitationem accusantium saepe earum.
+          Ea cumque vel odio in hic saepe autem illo nobis consequuntur, ipsa quod
+          ducimus similique praesentium officiis fugit, at, voluptas earum? Culpa
+          eaque distinctio rem nostrum hic assumenda ex harum voluptas, repellat,
+          aut maxime eum! Nisi doloribus aspernatur qui ab sunt ducimus sed,
+          nihil, natus, similique obcaecati reiciendis.
+        </p>
+
+        <div class="beneficios_content">
+          <h2 class="beneficios_title">Beneficios</h2>
+          <div class="cuadricula_beneficios">
+            <div class="ben1">
+              <h3>Presencia profesional 24/7</h3>
+              <p>
+                Tu negocio está disponible en todo momento, mostrando una imagen
+                seria, moderna y confiable.
+              </p>
+            </div>
+            <div class="ben2">
+              <h3>Aumento directo de clientes</h3>
+              <p>
+                Una web optimizada convierte visitas en ventas, reservas o
+                contactos reales.
+              </p>
+            </div>
+
+            <div class="ben3">
+              <h3>Integración con WhatsApp, redes y pagos</h3>
+              <p>
+                Todo conectado para que tus clientes puedan contactarte o comprar
+                sin fricciones.
+              </p>
+            </div>
+            <div class="ben4">
+              <h3>Diseño personalizado</h3>
+              <p>
+                Cada sitio se adapta al estilo, personalidad y necesidades de tu
+                marca, no es un template genérico.
+              </p>
+            </div>
+            <div class="ben5">
+              <h3>Soporte continuo</h3>
+              <p>
+                Acompañamiento después del lanzamiento: ajustes, mejoras y
+                monitorización.
+              </p>
+            </div>
+            <div class="ben6">
+              <h3>Ventaja competitiva</h3>
+              <p>
+                La mayoría de negocios no tiene una web profesional; tenerla te
+                pone por encima del promedio.
+              </p>
+            </div>
+          </div>
+          <a href="#contact" class="we_link">Necesito esto</a>
+          <a href="#contact" class="we_link_contact">Contacto</a>
+        </div>
+
+        <div class="we_section" id="team">
+          <h2 class="we_title">Equipo</h2>
+          <p class="we_content">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sed in
+            cumque inventore veritatis dicta quae! Quaerat at dolores maiores
+            culpa recusandae dolorum perferendis quisquam, asperiores alias minus.
+            Earum autem numquam quod vel dolor ducimus minus dignissimos
+            accusantium libero ipsam nemo asperiores, nostrum ullam, modi
+            doloremque architecto facilis illum quas.
+          </p>
+        </div>
+
+        <div class="team_box">
+          <div class="card">
+            <img
+              class="img_card"
+              src="media/img/foto_riki.png"
+              alt="foto_del_frontend"
+            />
+            <div class="information">
+              <h2 class="title_card">Ricardo Ginarte(RICK)</h2>
+              <h3 class="subtitle_card">Desarrollador / <b>FRONTEND</b></h3>
+              <h4 class="nivel_avanzado">Nivel: Avanzado</h4>
+
+              <div class="skill_card">
+                <h4>Habilidades</h4>
+                <p>📕Web APIs avanzadas</p>
+                <p>📕CSS avanzado</p>
+                <p>📕Responsive Design</p>
+                <p>📕JavaScript esencial</p>
+                <p>📕Arquitectura Frontend</p>
+                <p>📕DevTools avanzado</p>
+                <p>📕Testing</p>
+                <p>📕Accesibilidad (A11y) avanzada</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="img_card"
+              src="media/img/foto_william.jpg"
+              alt="foto_del_backend"
+            />
+            <div class="information">
+              <h2 class="title_card">William Garcia</h2>
+              <h3 class="subtitle_card">Desarrollador / <b>BACKEND</b></h3>
+              <h4 class="nivel_avanzado">Nivel: Avanzado</h4>
+
+              <div class="skill_card">
+                <h4>Habilidades</h4>
+                <p>📕Database design</p>
+                <p>📕Security</p>
+                <p>📕Microservices</p>
+                <p>📕Performance</p>
+                <p>📕Dominio completo de Node.js</p>
+                <p>📕Dominio completo de Express.js</p>
+                <p>📕Dominio completo de Nest.js</p>
+                <p>📕Dominio completo de PostgreSQL</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="img_card"
+              src="media/img/foto_sergio.jpg"
+              alt="foto_del_frontend"
+            />
+            <div class="information">
+              <h2 class="title_card">Sergio Gómez</h2>
+              <h3 class="subtitle_card">Desarrollador / <b>FRONTEND</b></h3>
+              <h4 class="nivel_intermedio">Nivel: Intermedio</h4>
+
+              <div class="skill_card">
+                <h4>Habilidades</h4>
+                <p>📙HTML bien estructurado</p>
+                <p>📙CSS sólido</p>
+                <p>📙Responsive Design</p>
+                <p>📙JavaScript esencial</p>
+                <p>📙Control de versiones (Git)</p>
+                <p>📙Manejo básico de un editor (VSCode)</p>
+                <p>📙SEO básico</p>
+                <p>📙Buenas prácticas de estructura</p>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              class="img_card"
+              src="media/img/foto_pedro.jpg"
+              alt="foto_del_seo"
+            />
+            <div class="information">
+              <h2 class="title_card">Pedro Gray</h2>
+              <h3 class="subtitle_card"><b>SEO</b></h3>
+              <h4 class="nivel_avanzado">Nivel: Avanzado</h4>
+
+              <div class="skill_card">
+                <h4>Habilidades</h4>
+                <p>📕Investigación de palabras clave (Keyword Research)</p>
+                <p>📕SEO On-Page</p>
+                <p>📕SEO Técnico</p>
+                <p>📕Comunicación clara</p>
+                <p>📕Análisis y auditoría</p>
+                <p>📕Entender la competencia</p>
+                <p>📕Capacidad de testeo (A/B testing)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="we_section">
+          <p class="we_content">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam,
+            cumque. Quia qui corrupti nobis deleniti, nemo voluptatum,
+            reprehenderit velit obcaecati facilis pariatur fugiat ipsa et
+            voluptate a corporis eveniet, rerum ipsam cum libero nam officia
+            similique ut. Nihil quas libero quia optio corrupti nesciunt
+            cupiditate fuga natus animi nemo provident doloremque obcaecati soluta
+            beatae dolorem minima quod, quo culpa, sit, necessitatibus quisquam
+            nulla impedit distinctio aperiam! Illo dolor quod ex commodi, maxime
+            accusantium sapiente voluptatem laboriosam. Magni repellendus nulla
+            ullam voluptate ut, vel quos culpa cum. Veniam commodi praesentium,
+            perspiciatis, magnam quis fugiat natus, rem tenetur maiores quae velit
+            eius.
+          </p>
+          <a href="#contact" class="we_link">Quiero avanzar</a>
+          <a href="#contact" class="we_link_contact">Contacto</a>
+        </div>
+      </section>
+
+      <div class="contacto" id="contact">
+        <div class="cont_map">
+          <h1 class="we_title">Ubicación</h1>
+          <iframe
+            class="map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d546.006069787219!2d-82.46218376419304!3d22.984218846423936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd6fd66c8c24a7%3A0x3c2d92969965cb9e!2sEdificio%2093!5e0!3m2!1sen!2scu!4v1764253749220!5m2!1sen!2scu"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+
+        <div class="cont_info">
+          <div class="whatsapp">
+            <label class="we_title">WhatsApp</label>
+            <p>+53 58089948</p>
+          </div>
+
+          <div class="gmail">
+            <label class="we_title">Correo Electrónico</label>
+            <p>shardevelteam@gmail.com</p>
+          </div>
+
+          <div class="peticion">
+            <h1 class="we_title">Solicitud de proyectos</h1>
+            <div class="for_input">
+              <label>Nombre de la empresa</label>
+              <input type="text" placeholder="Fulano de tal..." />
+            </div>
+
+            <div class="for_input">
+              <label>Numero de telefono</label>
+              <input type="number" placeholder="+1 234 5678" />
+            </div>
+
+            <div class="for_input">
+              <label>Titulo de petición</label>
+              <input
+                type="text"
+                placeholder="Una web para una tienda online..."
+              />
+            </div>
+
+            <div class="for_input">
+              <label>Descripción</label>
+              <textarea
+                rows="8"
+                placeholder="La quiero verde y de color azul y..."
+              ></textarea>
+            </div>
+
+            <a href="#" class="we_link">Enviar</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="content-limiter footer-content">
+        <h1 class="we_title">ES TU OPORTUNIDAD</h1>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam,
+          cumque. Quia qui corrupti nobis deleniti, nemo voluptatum, reprehenderit
+          velit obcaecati facilis pariatur fugiat ipsa et voluptate a corporis
+          eveniet, rerum ipsam cum libero nam officia similique ut. Nihil quas
+          libero quia optio corrupti nesciunt cupiditate fuga natus animi nemo
+          provident doloremque obcaecati soluta beatae dolorem minima quod, quo
+          culpa, sit, necessitatibus quisquam nulla impedit distinctio aperiam!
+          Illo dolor quod ex commodi, maxime accusantium sapiente voluptatem
+          laboriosam. Magni repellendus nulla ullam voluptate ut, vel quos culpa
+          cum. Veniam commodi praesentium, perspiciatis, magnam quis fugiat natus,
+          rem tenetur maiores quae velit eius.
+        </p>
+        <a class="we_link" href="#contact">Necesito esto (CLICK AQUI)</a>
+        <a class="we_link_contact" href="#contact">Contacto</a>
+      </div>
+    </footer>
+  </body>
+</html>

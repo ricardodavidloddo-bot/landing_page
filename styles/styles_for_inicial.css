@@ -1,0 +1,770 @@
+
+      .content-limiter {
+        max-width: 1500px; /* El ancho máximo para todo el contenido */
+        width: 100vw; /* Asegura que ocupe todo el ancho disponible hasta el max-width */
+        margin: 0 20px; /* Centra el bloque */
+        padding: 0; /* Padding para evitar que el contenido toque los bordes en móvil */
+        box-sizing: border-box;
+        /* IMPORTANTE: Los contenedores principales como header y hero_section ahora tienen width: 100% y usan este div interno. */
+      }
+
+      body {
+        /* CSS HEX */
+        --ruby-red: #a70823ff;
+        --sage-green: #6a994eff;
+        --amethyst: #9448bcff;
+        --shadow-grey: #2e282aff;
+        --porcelain: #fbfef9ff;
+
+        /* El margin: 0; y padding: 0; eliminan cualquier espacio por defecto del navegador */
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Previene el scroll horizontal si algo se desborda accidentalmente */
+        
+        background: #010b13;
+        background-size: 300% 300%;
+        color: var(--porcelain);
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+        letter-spacing: 1px;
+        position: relative;
+        z-index: 0;
+      }
+
+
+      header {
+        width: 100%; /* Mantiene el fondo del header de borde a borde */
+        height: 70px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+        border-bottom: 5px solid rgba(46, 194, 54, 0.1);
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center; /* Centra el contenedor interno (.content-limiter) */
+      }
+
+      /* Modificación: Usamos flexbox para centrar los elementos dentro del header, sin usar absolute */
+      .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+      }
+
+      .logo_content {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        width: 210px;
+        height: 70px;
+      }
+
+      .logo {
+        width: 70;
+        margin: 0;
+        height: 70px; /* Ajustado para caber mejor */
+        filter: drop-shadow(0 0 10px #0007);
+        position: relative;
+      }
+      .logo_text {
+        padding: 0;
+        margin: 0;
+        font-family: "Bytesized", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px; /* Ajustado */
+        color: rgb(145, 193, 116);
+        text-shadow: 0 0 20px #111e0b;
+        position: relative;
+      }
+
+      nav {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+      }
+
+      nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--porcelain);
+        transition: all 400ms ease-in-out 0s;
+        box-sizing: border-box;
+        font-weight: 600;
+        letter-spacing: 2px;
+        border-bottom: solid 2px transparent;
+        margin-top: 5px;
+      }
+
+      .link:hover {
+        color: rgb(121, 196, 78);
+        border-bottom: solid 2px rgb(121, 196, 78);
+      }
+
+      /*FIN DE LA SECCION DEL HEADER*/
+
+      /*hero section*/
+
+      .hero_section {
+        width: 100%; /* Ocupa todo el ancho para el fondo */
+        margin: 0; 
+        padding-top: 70px; /* Espacio para el fixed header */
+        box-sizing: border-box;
+        background: linear-gradient(180deg, #46773d 1%, #010b13 50%);
+
+        display: flex;
+        justify-content: center; /* Centra el contenido limitador */
+      }
+      
+      /* Contenido que sí está limitado */
+      .hero-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+
+      .logo_hero {
+        width: 400px;
+        margin: 20px;
+        margin-bottom: 0;
+        filter: drop-shadow(0 0 20px #111e0b);
+      }
+
+      .title_hero,
+      .title_hero2 {
+        max-width: 500px; 
+        font-size: 70px;
+        margin: 0 auto;
+        color: rgb(224, 224, 224);
+        text-shadow: 0 0 20px #111e0b;
+        font-family: "Tiny5", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        padding-top: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+      .title_hero2 {
+        color: rgb(145, 193, 116);
+        margin-top: 0;
+        padding: 0px;
+        font-size: 90px;
+      }
+
+      .subtitle_hero {
+        margin: 0 auto;
+        margin-bottom: 2em;
+        max-width: 500px;
+
+        color: rgb(145, 193, 116);
+        text-shadow: 0 0 20px #111e0b;
+
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+
+      .link_hero {
+        text-decoration: none;
+        display: inline-block;
+        margin-top: 30px;
+        padding: 10px 50px;
+        border-radius: 5px;
+
+        border-bottom: solid 5px var(--shadow-grey);
+        color: var(--shadow-grey);
+        background: rgb(222, 225, 220);
+
+        border-bottom: solid 5px var(--sage-green);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+      }
+
+      .link_hero:hover {
+        background: var(--sage-green);
+        color: var(--porcelain);
+        text-shadow: 0 0 20px rgb(130, 190, 93);
+        transform: scale(1.2);
+      }
+
+      .box_hero {
+        /* Este box maneja el contenido, lo centramos y ajustamos */
+        width: 100%;
+        max-width: 650px; 
+        margin: 0 auto; 
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+        height: calc(100vh - 70px); /* Ajustado para el header fijo */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px; 
+        box-sizing: border-box;
+      }
+
+      .hero_img {
+        padding: 40px;
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+        gap: 30px;
+
+        transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+        height: calc(100vh - 70px);
+
+        object-fit: cover;
+      }
+
+      .img_h1,
+      .img_h2,
+      .img_h3 {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 0 #00000055;
+        cursor: pointer;
+        background: transparent;
+        transition: all 400ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+      }
+
+      .img_h1 {
+        grid-column: 1 / -1;
+      }
+
+      .hero_img:hover {
+        padding: 110px;
+        gap: 50px;
+      }
+      .img_h1:hover {
+        transform: scale(1.2);
+      }
+      .img_h2:hover {
+        transform: scale(1.2);
+      }
+      .img_h3:hover {
+        transform: scale(1.2);
+      }
+
+      /*FIN DE LA SECCION DEL HERO*/
+
+      /*about we section*/
+
+      .we_section {
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 20px 20px; 
+        text-align: center;
+      }
+
+      .we_content {
+        max-width: 1300px;
+        margin: 20px auto;
+      }
+
+      .we_title {
+        font-family: "Tiny5", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 70px;
+
+        color: rgb(145, 193, 116);
+      }
+
+      .beneficios_title {
+        font-family: "Tiny5", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 50px;
+      }
+
+      .beneficios_content {
+        background: #031829;
+        box-sizing: border-box;
+        border-radius: 20px;
+        width: 100%;
+        max-width: 1300px;
+        margin: 50px auto;
+        padding: 20px;
+      }
+
+      .cuadricula_beneficios {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+        gap: 30px;
+        margin: 50px 0;
+      }
+
+      .ben1,
+      .ben2,
+      .ben3,
+      .ben4,
+      .ben5,
+      .ben6,
+      .ben7 {
+        background: #042139;
+        border-radius: 10px;
+        padding: 20px;
+        transition: all 200ms ease-in-out 0s;
+      }
+      .ben1:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .ben2:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .ben3:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .ben4:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .ben5:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+      .ben6:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      .we_link,
+      .we_link_contact {
+        text-decoration: none;
+        display: inline-block;
+        margin: 0px 20px;
+        margin-top: 30px;
+        padding: 10px 50px;
+        border-radius: 5px;
+
+        border-bottom: solid 5px var(--shadow-grey);
+        color: var(--shadow-grey);
+        background: rgb(222, 225, 220);
+
+        border-bottom: solid 5px var(--sage-green);
+        transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+      }
+
+      .we_link_contact {
+        background: transparent;
+        color: var(--porcelain);
+        border: solid 3px var(--sage-green);
+      }
+
+      .we_link:hover {
+        background: var(--sage-green);
+        color: var(--porcelain);
+        text-shadow: 0 0 20px rgb(130, 190, 93);
+        transform: scale(1.1);
+      }
+
+      .we_link_contact:hover {
+        background: var(--sage-green);
+        text-shadow: 0 0 20px rgb(130, 190, 93);
+        transform: scale(1.1);
+      }
+
+      .team_box {
+        max-width: 1300px;
+        margin: 50px auto;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+        gap: 30px;
+      }
+
+      .card {
+        background: #031829;
+
+        width: 600px;
+        margin: auto;
+        height: max-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        overflow: hidden;
+        border-radius: 15px;
+
+        transition: all 800ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+      }
+
+      .card:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+      }
+
+      .active {
+        transform: translate(50%, 50%);
+      }
+
+      .img_card {
+        width: 45%;
+        justify-self: left;
+        object-fit: cover;
+      }
+
+      .information {
+        margin: 1rem 2rem;
+        font-size: 12px;
+        width: 45%;
+      }
+
+      .skill_card {
+        text-align: justify;
+        background: #042139;
+        padding: 20px;
+        margin: 0;
+        padding-top: 8px;
+        border-radius: 10px;
+      }
+
+      .title_card {
+        font-family: "Tiny5", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 30px;
+        color: rgb(130, 193, 91);
+      }
+
+      b {
+        color: rgb(130, 193, 91);
+      }
+
+      .nivel_avanzado {
+        color: rgb(231, 6, 43);
+        text-shadow: 0 0 10px rgb(233, 5, 43);
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      .nivel_intermedio {
+        color: rgb(239, 142, 6);
+        text-shadow: 0 0 10px rgb(202, 119, 3);
+        margin: 0;
+        margin-bottom: 10px;
+      }
+
+      .skill_card p {
+        margin: 0;
+        text-align: justify;
+      }
+
+      /* FIN DE LA SECCION SOBRE NOSOTROS*/
+
+      /* COMIENZA LA SECCION DEL contacto*/
+
+      .contacto {
+        max-width: 1500px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        box-sizing: border-box;
+        background: transparent;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .cont_map {
+        padding: 10px;
+      }
+
+      .contacto h1 {
+        margin-top: 20px;
+      }
+
+      .cont_info {
+        box-sizing: border-box;
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(auto, auto);
+        gap: 30px;
+
+        transition: all 200ms cubic-bezier(0.075, 0.82, 0.165, 1) 0s;
+
+        object-fit: cover;
+        text-align: left;
+        padding: 10px;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 6px 8px;
+        border: none;
+        border: solid 2px rgb(130, 193, 91);
+        box-shadow: 0 0 15px #0003;
+        background: transparent;
+        border-radius: 10px;
+        color: var(--porcelain);
+      }
+
+      textarea {
+        min-width: 100%;
+        resize: none;
+        min-height: 102px;
+
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 500;
+        font-style: normal;
+      }
+
+      label {
+        font-size: 0.8em;
+        line-height: 2;
+      }
+
+      .whatsapp label {
+        font-size: 30px;
+      }
+
+      .gmail label {
+        font-size: 30px;
+      }
+
+      .peticion h1 {
+        font-size: 30px;
+      }
+
+      .peticion {
+        grid-column: 1 / -1;
+      }
+
+      .map {
+        outline: solid 3px rgb(130, 193, 91);
+        outline-offset: 5px;
+        border-radius: 10px;
+        width: 100%;
+        height: 450px;
+      }
+
+      footer {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%; /* Mantiene el fondo del footer de borde a borde */
+        height: auto;
+        padding: 40px 0; /* padding vertical, el horizontal se pone en .content-limiter */
+        font-size: 15px;
+        margin-bottom: 0; /* Eliminado el margen inferior */
+        display: flex;
+        justify-content: center; /* Centra el contenido limitador */
+      }
+      
+      .footer-content {
+          text-align: center;
+      }
+
+      /* ========================================= */
+      /* ======== MEDIA QUERIES (RESPONSIVE) ======*/
+      /* ========================================= */
+
+      /* Para pantallas pequeñas y teléfonos (ancho máximo 768px) */
+      @media (max-width: 768px) {
+        /* --- HEADER Y NAV --- */
+        body{
+          font-size: 12px;
+        }
+
+
+        header {
+          height: 60px;
+        }
+        
+
+        
+
+      .link:hover {
+        color: rgb(121, 196, 78);
+        border-bottom: solid 2px rgb(121, 196, 78);
+      }
+
+        .card{
+          width: 330px;
+        }
+        
+        /* Aseguramos que el logo y el nav se vean bien dentro del content-limiter */
+        .header-content {
+            padding: 0 10px;
+        }
+
+        .logo_content {
+          width: auto;
+          height: 50px;
+          gap: 5px;
+        }
+        .logo {
+          height: 40px;
+        }
+        .logo_text {
+          font-size: 30px;
+        }
+
+        nav {
+          display: none;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero_section {
+          padding-top: 60px;
+          height: auto;
+        }
+
+        .title_hero, .title_hero2{
+          width: 300px;
+        }
+        
+        .hero-grid {
+            grid-template-columns: 1fr;
+            width: 500px;
+        }
+
+        .box_hero {
+          height: auto;
+          width: 350px;
+          padding: 30px 20px; 
+          height: auto; /* Permite que la altura se ajuste al contenido */
+        }
+        .hero_img {
+          height: auto;
+          padding: 20px; 
+          width: 350px;
+        }
+
+        .title_hero,
+        .title_hero2 {
+          font-size: 40px;
+          padding-top: 0;
+        }
+        .title_hero2 {
+          font-size: 55px;
+          margin-bottom: 20px;
+        }
+        .hero_img:hover {
+          padding: 20px;
+          gap: 10px;
+        }
+
+        /* --- ABOUT WE SECTION / BENEFICIOS --- */
+        .we_section {
+          padding: 20px 10px;
+        }
+
+        .we_title {
+          font-size: 45px;
+        }
+
+        .cuadricula_beneficios {
+          grid-template-columns: 1fr;
+        }
+
+        /* --- TEAM CARDS --- */
+        .team_box {
+          grid-template-columns: 1fr;
+        }
+
+        .card {
+          flex-direction: column;
+        }
+
+        .img_card {
+          width: 100%;
+          height: 200px;
+        }
+
+        .information {
+          width: auto;
+          margin: 1rem;
+        }
+
+        /* --- CONTACTO --- */
+        .contacto {
+          grid-template-columns: 1fr;
+          padding: 20px 10px;
+        }
+
+        .cont_map {
+          order: 2;
+        }
+        .cont_info {
+          grid-template-columns: 1fr;
+          order: 1;
+        }
+
+        .map {
+          height: 300px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+          padding: 20px 0;
+        }
+      }
+
+      /* Para tabletas (ancho máximo 1024px) */
+      @media (min-width: 769px) and (max-width: 1024px) {
+        
+        
+        
+        .hero-grid {
+            grid-template-columns: 1fr;
+        }
+
+
+        .box_hero, .hero_img {
+            height: auto;
+            max-width: 1024px; /* Ajuste para tablets */
+            margin: 0 auto;
+        }
+        .hero_img {
+          padding: 50px;
+          height: 50vh;
+        }
+        .we_section {
+          max-width: 90%;
+        }
+        .team_box {
+          grid-template-columns: 1fr;
+          max-width: 90%;
+        }
+        .card {
+          max-width: 700px;
+        }
+        .contacto {
+          grid-template-columns: 1fr;
+          max-width: 90%;
+        }
+        .cont_map {
+          order: 2;
+        }
+        .cont_info {
+          order: 1;
+        }
+      }
